@@ -7,15 +7,13 @@ function App() {
     <div className="App">
       {
         letters.map(({title, symbol, audio}, index) => (
-            <div>
-              <Tile
-                  index={index + 1}
-                  title={title}
-                  symbol={symbol}
-                  audio={audio}
-                  key={index}
-              />
-            </div>
+            <Tile
+                index={index + 1}
+                title={title}
+                symbol={symbol}
+                audio={audio}
+                key={index}
+            />
         ))
       }
     </div>
