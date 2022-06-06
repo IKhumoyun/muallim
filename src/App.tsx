@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { letters } from "./data/letters";
+import {Tile} from "./components/tile";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        letters.map(({title, symbol, audio}, index) => (
+            <div>
+              <Tile
+                  index={index + 1}
+                  title={title}
+                  symbol={symbol}
+                  audio={audio}
+                  key={index}
+              />
+            </div>
+        ))
+      }
     </div>
   );
 }
