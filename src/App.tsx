@@ -1,6 +1,8 @@
 import React from 'react';
 import { letters } from "./data/letters";
 import {Tile} from "./components/tile";
+import {Footer} from "./components/footer";
+import './assets/styles/main.scss';
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
             />
         ))
       }
+      <Footer/>
     </div>
   );
 }
